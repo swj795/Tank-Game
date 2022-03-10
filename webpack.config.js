@@ -34,7 +34,7 @@ module.exports = {
       },
     },
   },
-  devtool: 'inline-source-map',
+  devtool: 'eval-cheap-source-map',
   devServe: {
     static: './dist',
   },
