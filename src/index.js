@@ -1,2 +1,3 @@
-console.log('2');
-console.log(a);
+import _ from 'lodash';
+
+console.log(_.add(1, 2));

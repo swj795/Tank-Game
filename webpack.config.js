@@ -4,7 +4,23 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: {
+    index: {
+      import: './src/index.js',
+      dependOn: 'shared',
+    },
+    test: {
+      import: './src/test.js',
+      dependOn: 'shared',
+    },
+    shared: 'lodash',
+  },
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
   output: {
     filename: '[name][hash:5].js',
     path: path.resolve(__dirname, 'dist'),
@@ -35,8 +51,9 @@ module.exports = {
     },
   },
   devtool: 'eval-cheap-source-map',
-  devServe: {
+  devServer: {
     static: './dist',
+    hot: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
