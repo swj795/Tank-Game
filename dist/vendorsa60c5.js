@@ -6,7 +6,7 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-(self["webpackChunktank_game"] = self["webpackChunktank_game"] || []).push([["shared"],{
+(self["webpackChunktank_game"] = self["webpackChunktank_game"] || []).push([["vendors"],{
 
 /***/ "./node_modules/lodash/lodash.js":
 /*!***************************************!*\
@@ -18,9 +18,4 @@ eval("/* module decorator */ module = __webpack_require__.nmd(module);\nvar __WE
 
 /***/ })
 
-},
-/******/ __webpack_require__ => { // webpackRuntimeModules
-/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ var __webpack_exports__ = (__webpack_exec__("./node_modules/lodash/lodash.js"));
-/******/ }
-]);
+}]);
